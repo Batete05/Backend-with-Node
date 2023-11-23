@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body{
+            height: 100vh;
+            background-color: #000;
+            background-image: url(https://www.noupe.com/wp-content/uploads/2022/02/daniel-leone-v7daTKlZzaw-unsplash-1024x648.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+        }
+        a:hover{
+            color: orange;
+        }
+        header{
+            position: relative;
+            padding: 0 2rem;
+        }
+        .navbar{
+            width: 100%;
+            height: 60px;
+            max-width:1200px ;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar .logo a{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar .links{
+            display: flex;
+            gap: 2rem;
+        }
+        .navbar .toggle_btn{
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+        .action_btn{
+            background-color: orange;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: scale 0.2 ease;
+        }
+        .action_btn:hover{
+            scale: 1.05; 
+            color: #fff;
+        }
+        .action_btn:active{
+            scale: 0.95;
+        }
+        .dropdown_menu{
+            display: none;
+            position: absolute;
+            right: 2rem;
+            top: 60px;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blue(15px);
+            overflow: hidden;   
+            transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .dropdown_menu.open {
+            height: 240px;
+        }
+        .dropdown_menu li{
+            padding: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dropdown_menu .action_btn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            color: white;
+            text-align: center;
+            margin-top: 300px;
+        }
+        /* RESPONSENSIVE DESIGN */
+        @media(max-width:992px){
+            .navbar .links,
+            .navbar .action_btn{
+                display: none;
+            }
+            .navbar .toggle_btn{
+                display: block;
+            }
+            .dropdown_menu{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Web Dev Creative</a></div>
+            <ul class="links">
+                <li><a href="hero">Home</a></li>
+                <li><a href="about">About </a></li>
+                <li><a href="services"> Services</a></li>
+                <li><a href="contact">Contact </a></li>
+            </ul>
+            <a href="#" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu ">
+            <li><a href="hero">Home</a></li>
+                <li><a href="about">About </a></li>
+                <li><a href="services"> Services</a></li>
+                <li><a href="contact">Contact </a></li>
+                <li><a href="#" class="action_btn">Get Started</a></li>
+        </div>
+    </header>
+    <script>
+        const toggleBtn= document.querySelector('.toggle_btn')
+        
+    </script>
+    <div class="container">
+        <div class="title">      
+              <h1>Welcome there </h1>
+        </div>
+        <div class="nutt">
+            <a href="login"><input type="button" value="Login" class="action_btn"></a>
+        </div>
+    </div>
+</body>
+</html>
